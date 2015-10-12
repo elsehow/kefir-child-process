@@ -1,6 +1,6 @@
 # kefir-child-process
 
-`child_process.spawn` and `child_process.exec` as [kefir](https://rpominov.github.io/kefir/) streams 8)
+`child_process.spawn` and `child_process.exec` as [kefir](https://rpominov.github.io/kefir/) streams 😎
 
 ## installation
 
