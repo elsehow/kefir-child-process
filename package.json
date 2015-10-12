@@ -1,0 +1,29 @@
+{
+  "name": "kefir-child-process",
+  "version": "1.0.0",
+  "description": "child_process.spawn and child_process.exec as kefir streams 8)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/elsehow/kefir-child-process.git"
+  },
+  "keywords": [
+    "exec",
+    "spawn",
+    "child_process",
+    "kefir",
+    "frp"
+  ],
+  "author": "elsehow",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elsehow/kefir-child-process/issues"
+  },
+  "homepage": "https://github.com/elsehow/kefir-child-process#readme",
+  "dependencies": {
+    "kefir": "^3.1.0"
+  }
+}
