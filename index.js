@@ -1,15 +1,15 @@
 var child_process = require('child_process')
   , Kefir = require('kefir')
 
-function execute (command) {
+function execute (command, options) {
   return Kefir.fromNodeCallback(function (cb) {
-    child_process.exec(command, cb)
+    child_process.exec(command, options, cb)
   })
 }
 
 function spawn (command, args, opts) {
-  var proc = child_process.spawn(command, args, opts)
   return Kefir.stream(function (emitter) {
+    var proc = child_process.spawn(command, args, opts)
     proc.stdout.on('data', function (data) {
       emitter.emit(data.toString())
     })
@@ -17,8 +17,15 @@ function spawn (command, args, opts) {
       emitter.emit(err.toString())
     })
     proc.on('close', function (code) {
+      proc = null
       emitter.end()
     })
+    return function () {
+      if (proc) {
+        proc.kill()
+        proc = null
+      }
+    }
   })
 }
 
