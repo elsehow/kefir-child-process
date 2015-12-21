@@ -1,6 +1,6 @@
 {
   "name": "kefir-child-process",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "child_process.spawn and child_process.exec as kefir streams 8)",
   "main": "index.js",
   "scripts": {
